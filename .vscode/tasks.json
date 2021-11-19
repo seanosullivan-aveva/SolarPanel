@@ -23,7 +23,17 @@
             "problemMatcher": "$msCompile"
         },
         {            
-            "label": "build-tests",
+            "label": "Build All",
+            "group": "build",
+            "dependsOn":["build-exe", "build-application-tests", "build-logic-tests"]
+        }, 
+        {            
+            "label": "Build Tests",
+            "group": "build",
+            "dependsOn":["build-application-tests", "build-logic-tests"]
+        }, 
+        {            
+            "label": "build-application-tests",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -41,8 +51,27 @@
             },
             "problemMatcher": "$msCompile"
         },
+        {            
+            "label": "build-logic-tests",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                // Ask dotnet build to generate full paths for file names.
+                "/property:GenerateFullPaths=true",
+                // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+                "/consoleloggerparameters:NoSummary",
+                // Project to build
+                "SolarPanel.Logic.Tests/SolarPanel.Logic.Tests.csproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
         {
-            "label": "run-tests",
+            "label": "run-application-tests",
             "command": "dotnet",
             "type": "shell",
             "group": "test",

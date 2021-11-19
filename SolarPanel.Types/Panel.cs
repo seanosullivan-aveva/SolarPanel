@@ -4,11 +4,10 @@ namespace SolarPanel.Types;
 
 public class Panel
 {
-
     public Panel(
         string manufacturer,
         string model,
-        SizeF panelSize,
+        SizeF size,
         double power,
         double efficiency,
         double weight,
@@ -18,7 +17,7 @@ public class Panel
     {
         Manufacturer = manufacturer;
         Model = model;
-        PanelSize = panelSize;
+        Size = size;
         Power = power;
         Efficiency = efficiency;
         Weight = weight;
@@ -40,7 +39,7 @@ public class Panel
     /// <summary>
     /// The size of the panel (in metres)
     /// </summary>
-    public SizeF PanelSize { get; }
+    public SizeF Size { get; }
 
     /// <summary>
     /// The nominal power of the panel (Watts)
