@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using SolarPanel.House.Data;
+using SolarPanel.Data;
 
 namespace SolarPanel.Application.Tests;
 

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.House.Data", "SolarPanel.House.Data\SolarPanel.House.Data.csproj", "{55EE29D3-53A1-4B1D-B3C7-2F68F26790E9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Data", "SolarPanel.Data\SolarPanel.Data.csproj", "{3A7C777E-BFB1-43E1-941D-32916F2978D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Application", "SolarPanel.Application\SolarPanel.Application.csproj", "{9912CD7F-8BA8-43F4-AE37-B70944953965}"
@@ -15,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Logic", "SolarPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Logic.Tests", "SolarPanel.Logic.Tests\SolarPanel.Logic.Tests.csproj", "{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Types", "SolarPanel.Types\SolarPanel.Types.csproj", "{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +24,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{55EE29D3-53A1-4B1D-B3C7-2F68F26790E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55EE29D3-53A1-4B1D-B3C7-2F68F26790E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55EE29D3-53A1-4B1D-B3C7-2F68F26790E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55EE29D3-53A1-4B1D-B3C7-2F68F26790E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A7C777E-BFB1-43E1-941D-32916F2978D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A7C777E-BFB1-43E1-941D-32916F2978D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7C777E-BFB1-43E1-941D-32916F2978D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,5 +44,9 @@ Global
 		{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

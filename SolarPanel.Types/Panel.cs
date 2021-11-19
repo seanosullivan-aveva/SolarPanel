@@ -1,11 +1,11 @@
 ﻿using System.Drawing;
 
-namespace SolarPanel.Data;
+namespace SolarPanel.Types;
 
-public class SolarPanel
+public class Panel
 {
 
-    public SolarPanel(
+    public Panel(
         string manufacturer,
         string model,
         SizeF panelSize,
@@ -35,13 +35,11 @@ public class SolarPanel
     /// <summary>
     /// The model of the solar panel
     /// </summary>
-    /// <value></value>
     public string Model { get; }
 
     /// <summary>
     /// The size of the panel (in metres)
     /// </summary>
-    /// <value></value>
     public SizeF PanelSize { get; }
 
     /// <summary>
@@ -57,7 +55,6 @@ public class SolarPanel
     /// <summary>
     /// The weight of the panel (Kg)
     /// </summary>
-    /// <value></value>
     public double Weight { get; }
 
     /// <summary>
@@ -68,7 +65,6 @@ public class SolarPanel
     /// <summary>
     /// The const of installation of the panel (£)
     /// </summary>
-    /// <value></value>
     public double InstallationCost { get; }
 
     /// <summary>

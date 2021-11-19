@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SolarPanel.Data\SolarPanel.Data.csproj" />
-  </ItemGroup>
-
 </Project>

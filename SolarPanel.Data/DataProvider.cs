@@ -1,6 +1,6 @@
 using System.Reflection;
 using Newtonsoft.Json;
-using SolarPanel.Data;
+using SolarPanel.Types;
 
 namespace SolarPanel.Data;
 
@@ -24,9 +24,9 @@ public class DataProvider
         Console.WriteLine($"Loading data file from {dataFileLocation}");
         var dataFile = File.ReadAllText(dataFileLocation);
 
-        var data = JsonConvert.DeserializeObject<List<SolarPanel>>(dataFile);
+        var data = JsonConvert.DeserializeObject<List<Panel>>(dataFile);
         
-        SolarPanels = data ?? new List<SolarPanel>();
+        SolarPanels = data ?? new List<Panel>();
     }
 
     #endregion
@@ -39,5 +39,5 @@ public class DataProvider
     /// <summary>
     /// All the solar panels available
     /// </summary>
-    public List<SolarPanel> SolarPanels { get; }
+    public List<Panel> SolarPanels { get; }
 }

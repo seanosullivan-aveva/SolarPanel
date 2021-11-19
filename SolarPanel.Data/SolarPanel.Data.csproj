@@ -8,10 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.json" Version="13.0.1" />
+    <ProjectReference Include="..\SolarPanel.Types\SolarPanel.Types.csproj" />
   </ItemGroup>
 
 <ItemGroup>
     <None Update="Panels.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Houses.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
