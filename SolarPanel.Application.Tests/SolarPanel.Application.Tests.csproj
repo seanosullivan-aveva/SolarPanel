@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SolarPanelData\SolarPanelData.csproj" />
+    <ProjectReference Include="..\SolarPanel.Data\SolarPanel.Data.csproj" />
     <ProjectReference Include="..\HouseData\HouseData.csproj" />
   </ItemGroup>
 
