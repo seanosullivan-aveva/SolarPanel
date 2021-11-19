@@ -33,7 +33,7 @@
                 // Do not generate summary otherwise it leads to duplicate errors in Problems panel
                 "/consoleloggerparameters:NoSummary",
                 // Project to build
-                "SolarPanelExe.Tests/SolarPanelExe.Tests.csproj"
+                "SolarPanel.Application.Tests/SolarPanel.Application.Tests.csproj"
             ],
             "group": "build",
             "presentation": {
@@ -48,7 +48,7 @@
             "group": "test",
             "args": [
                 "test",
-                "${workspaceFolder}/SolarPanelExe.Tests/SolarPanelExe.Tests.csproj"
+                "${workspaceFolder}/SolarPanel.Application.Tests/SolarPanel.Application.Tests.csproj"
             ],
             "presentation": {
                 "reveal": "silent"
