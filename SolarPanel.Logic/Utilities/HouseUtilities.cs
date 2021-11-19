@@ -1,6 +1,6 @@
 ﻿using SolarPanel.Types;
 
-namespace SolarPanel.Logic;
+namespace SolarPanel.Logic.Utilities;
 
 public static class HouseUtilities
 {
