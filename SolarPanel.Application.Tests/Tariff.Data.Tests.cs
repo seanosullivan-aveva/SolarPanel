@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using SolarPanel.Data;
+using SolarPower.Data;
 
 namespace SolarPanel.Application.Tests;
 
-public class SolarPanelData_Tests
+public class Tariff_Data_Tests
 {
     [SetUp]
     public void Setup()
@@ -18,6 +18,6 @@ public class SolarPanelData_Tests
         // Act
 
         // Assert
-        Assert.That(PanelProvider.Instance.SolarPanels, Has.Count.GreaterThan(1));
+        Assert.That(TariffProvider.Instance.Tariffs, Has.Count.GreaterThan(1));
     }
 }

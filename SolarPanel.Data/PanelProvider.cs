@@ -4,20 +4,20 @@ using SolarPanel.Types;
 
 namespace SolarPanel.Data;
 
-public class DataProvider
+public class PanelProvider
 {
     #region Singleton Implementation
 
-    private static readonly Lazy<DataProvider> lazy =
-    new Lazy<DataProvider>(() => new DataProvider());
+    private static readonly Lazy<PanelProvider> lazy =
+    new Lazy<PanelProvider>(() => new PanelProvider());
 
-    public static DataProvider Instance { get { return lazy.Value; } }
+    public static PanelProvider Instance { get { return lazy.Value; } }
 
     #endregion
 
     #region Constructors
 
-    private DataProvider()
+    private PanelProvider()
     {
         var dataFileLocation = AppDomain.CurrentDomain.BaseDirectory + "Panels.json";
 

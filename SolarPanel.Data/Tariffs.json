@@ -1,0 +1,18 @@
+[
+    {
+        "Name" : "Test",
+        "Price" : 4.5,    
+        "Expiry" : "2025-04-21T00:00:00",    
+        "ExpiredPrice" : "2.3",    
+        "MinimumFeedAmount" : null,   
+        "MaximumFeedAmount" : null    
+    },
+    {
+        "Name" : "Test2",
+        "Price" : 3.8,    
+        "Expiry" : "2030-1-1T00:00:00",    
+        "ExpiredPrice" : "2.35",    
+        "MinimumFeedAmount" : null,   
+        "MaximumFeedAmount" : null    
+    }  
+]
