@@ -1,0 +1,24 @@
+[
+    {
+        "Manufacturer": "Solaria",
+        "Model": "PowerXT® Pure Black™400W",
+        "PanelSize": "1.204, 1.644",
+        "Power": "400.0",
+        "Efficiency": "20.20",
+        "Weight" : "4.3",
+        "Cost" : "334.03",
+        "InstallationCost" : "130",
+        "Url" : "https://www.solaria.com/powerxt-400-solar-panels"
+    },
+    {
+        "Manufacturer": "Solar Power Supply",
+        "Model": "120W SHINGLE",
+        "PanelSize": "1.17, 0.505",
+        "Power": "120.0",
+        "Efficiency": "21.8",
+        "Weight" : "7.0",
+        "Cost" : "129.95",
+        "InstallationCost" : "130",
+        "Url" : "https://www.solarpowersupply.co.uk/solar-power-supply-120w-shingle-solar-panel"
+    }
+]

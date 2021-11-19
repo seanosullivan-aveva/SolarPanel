@@ -1,0 +1,14 @@
+[
+    {
+        "Id": "Seans House",
+        "RoofSize": "8, 3"
+    },
+    {
+        "Id": "James House",
+        "RoofSize": "4, 4"
+    },
+    {
+        "Id": "Richards Mansion",
+        "RoofSize": "22, 4"
+    }
+]
