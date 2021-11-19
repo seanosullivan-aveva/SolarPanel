@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-exe",
-            "program": "${workspaceFolder}/SolarPanelExe/bin/Debug/net6.0/SolarPanelExe.dll",
+            "program": "${workspaceFolder}/SolarPanel.Application/bin/Debug/net6.0/SolarPanel.Application.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/SolarPanelExe",
+            "cwd": "${workspaceFolder}/SolarPanel.Application",
             "console": "internalConsole",
             "stopAtEntry": false
         },
