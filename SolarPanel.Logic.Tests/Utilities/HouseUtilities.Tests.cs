@@ -15,9 +15,9 @@ public class House_Tests
 
     static IEnumerable<House> SillyHouses = new List<House>()
     {
-        new House("Silly 1", new SizeF(-10.0f, -10.0f)),
-        new House("Silly 2", new SizeF(-10.0f, 10.0f)),
-        new House("Silly 3", new SizeF(10.0f, -10.0f)),
+        new House("Silly 1", new SizeF(-10.0f, -10.0f), 0,0),
+        new House("Silly 2", new SizeF(-10.0f, 10.0f), 0,0),
+        new House("Silly 3", new SizeF(10.0f, -10.0f), 0,0),
     };
 
     [TestCaseSource(nameof(SillyHouses))]
@@ -66,6 +66,6 @@ public class House_Tests
 
     private static House CreateTestHouse(SizeF size)
     {
-        return new House("Test", size);
+        return new House("Test", size, 0, 0);
     }
 }
