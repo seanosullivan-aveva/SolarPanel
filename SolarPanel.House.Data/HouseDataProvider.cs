@@ -1,7 +1,7 @@
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace HouseData
+namespace SolarPanel.House.Data
 {
     public class HouseProvider
     {

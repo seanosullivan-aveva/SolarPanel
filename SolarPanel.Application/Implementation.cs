@@ -1,4 +1,4 @@
-using SolarPanelData;
+using SolarPanel.Data;
 
 public class Implementation
 {

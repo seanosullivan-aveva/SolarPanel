@@ -1,8 +1,7 @@
 using NUnit.Framework;
-using SolarPanelData;
-using HouseData;
+using SolarPanel.House.Data;
 
-namespace SolarPanelTests;
+namespace SolarPanel.Application.Tests;
 
 public class HouseData_Tests
 {

@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using SolarPanelData;
+using SolarPanel.Data;
 
-namespace SolarPanelTests;
+namespace SolarPanel.Application.Tests;
 
 public class SolarPanelData_Tests
 {

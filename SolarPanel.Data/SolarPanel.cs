@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 
-namespace SolarPanelData;
+namespace SolarPanel.Data;
+
 public class SolarPanel
 {
 

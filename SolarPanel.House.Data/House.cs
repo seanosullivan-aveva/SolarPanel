@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace HouseData;
+namespace SolarPanel.House.Data;
 
 public class House
 {
