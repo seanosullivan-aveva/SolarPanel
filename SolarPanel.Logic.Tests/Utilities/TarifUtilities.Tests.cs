@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using SolarPanel.Types;
 using SolarPanel.Logic.Utilities;
+using static TestUtilities;
 
 namespace SolarPanel.Logic.Tests;
 
@@ -81,8 +82,4 @@ public class TarifUtilities_Tests
         Assert.That(amountPaid, Is.EqualTo(0.113152).Within(1).Percent);
     }
 
-    private static Tariff CreateTariff(double price, DateTime expiry, double expiredPrice)
-    {
-        return new Tariff("Test", price, expiry, expiredPrice, null, null);
-    }
 }

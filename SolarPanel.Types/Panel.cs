@@ -8,11 +8,11 @@ public class Panel
         string manufacturer,
         string model,
         SizeF size,
-        double power,
-        double efficiency,
-        double weight,
-        double cost,
-        double installationCost,
+        float power,
+        float efficiency,
+        float weight,
+        float cost,
+        float installationCost,
         string url)
     {
         Manufacturer = manufacturer;
@@ -44,27 +44,27 @@ public class Panel
     /// <summary>
     /// The nominal power of the panel (Watts)
     /// </summary>
-    public double Power { get; }
+    public float Power { get; }
 
     /// <summary>
     /// The efficiency of the panel (%)
     /// </summary>
-    public double Efficiency { get; }
+    public float Efficiency { get; }
 
     /// <summary>
     /// The weight of the panel (Kg)
     /// </summary>
-    public double Weight { get; }
+    public float Weight { get; }
 
     /// <summary>
     /// The purchase cost of the panel (£)
     /// </summary>
-    public double Cost { get; }
+    public float Cost { get; }
 
     /// <summary>
     /// The const of installation of the panel (£)
     /// </summary>
-    public double InstallationCost { get; }
+    public float InstallationCost { get; }
 
     /// <summary>
     /// The URL of the product details

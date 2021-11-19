@@ -35,4 +35,15 @@ public static class HouseUtilities
 
         return hPanels * vPanels;
     }
+
+    /// <summary>
+    /// The amount of power generated (Watt Hours) by the house for the specified number of hours
+    /// </summary>
+    /// <param name="house">The house with solar panels fitted</param>
+    /// <param name="hoursOfDaylight">The number of hours of daylight</param>
+    /// <returns></returns>
+    public static float PowerGeneratedForHouse(HouseWithPanel house, int hoursOfDaylight)
+    {
+        return house.NumberOfPanels * house.Panel.Power * hoursOfDaylight;
+    }
 }

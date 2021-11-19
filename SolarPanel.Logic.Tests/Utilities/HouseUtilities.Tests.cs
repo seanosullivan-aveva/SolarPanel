@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using SolarPanel.Types;
 using SolarPanel.Logic.Utilities;
+using static TestUtilities;
 
 namespace SolarPanel.Logic.Tests;
 
@@ -50,22 +51,31 @@ public class House_Tests
         return HouseUtilities.MaxNumberOfPanels(house, panel);
     }
 
-    private static Panel CreateTestPanel(SizeF size)
+    [TestCase(0, 0, ExpectedResult = 0f)]
+    [TestCase(1, 0, ExpectedResult = 0f)]
+    [TestCase(2, 0, ExpectedResult = 0f)]
+    [TestCase(10, 0, ExpectedResult = 0f)]
+    [TestCase(100, 0, ExpectedResult = 0f)]
+    [TestCase(0, 1, ExpectedResult = 0f)]
+    [TestCase(1, 1, ExpectedResult = 100f)]
+    [TestCase(2, 1, ExpectedResult = 200f)]
+    [TestCase(10, 1, ExpectedResult = 1000f)]
+    [TestCase(100, 1, ExpectedResult = 10000f)]
+    [TestCase(0, 2, ExpectedResult = 0f)]
+    [TestCase(1, 2, ExpectedResult = 200f)]
+    [TestCase(2, 2, ExpectedResult = 400f)]
+    [TestCase(10, 2, ExpectedResult = 2000f)]
+    [TestCase(100, 2, ExpectedResult = 20000f)]
+    public float PowerGeneratedForHouse_generates_correct_results(int numberOfPanels, int daylightHours)
     {
-        return new Panel(
-            "test",
-            "test",
-            size,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            string.Empty);
+        // Arrange
+        var house = CreateTestHouse(new SizeF(5, 3));
+        var panel = CreateTestPanel(new SizeF(1, 1), power:100.0f);
+        var housePanel = new HouseWithPanel(house, panel, numberOfPanels);
+
+        // Act
+        return HouseUtilities.PowerGeneratedForHouse(housePanel, daylightHours);
     }
 
-    private static House CreateTestHouse(SizeF size)
-    {
-        return new House("Test", size, 0, 0);
-    }
+
 }
