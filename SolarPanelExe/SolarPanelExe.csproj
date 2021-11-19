@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\SolarPanelData\SolarPanelData.csproj" />
+    <ProjectReference Include="..\SolarPanel.Logic\SolarPanel.Logic.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

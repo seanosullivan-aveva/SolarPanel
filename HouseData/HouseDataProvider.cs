@@ -1,6 +1,5 @@
 using System.Reflection;
 using Newtonsoft.Json;
-using SolarPanelData;
 
 namespace HouseData
 {
