@@ -30,7 +30,7 @@ public class Implementation
         var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
         var panel = PanelProvider.Instance.SolarPanels.First(o => o.Model == "PowerXT® Pure Black™400W");
         var tariff = TariffProvider.Instance.Tariffs.First(o => o.Name == "Test");
-        var installer = CalculationEngine.FindBestInstaller(house, panel);
+        var installer = CalculationEngine.FindCheapestInstaller(house, panel);
 
         if(installer == null)
         {
@@ -53,7 +53,28 @@ public class Implementation
         OutputEconomics(economics.Value.economics, numYears);
     }
 
-    private static void OutputEconomics(SolarPanelEconomics economics, int numYears)
+    public static void FindMeBestCombinationOfPanelAndTariff()
+    {
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
+        int numYears = 25;
+
+        var best = CalculationEngine.FindBestCombination(house, numYears);
+
+        if (best == null)
+        {
+            Console.WriteLine($"Failed to compute a suitable combination of panel and tariff for the house {house.Id}");
+            return;
+        }
+
+        Console.WriteLine("========================================================================");
+        Console.WriteLine($"The best installer is {best.Value.installer.Id}");
+        Console.WriteLine($"The best panel is {best.Value.panel.Model} made by {best.Value.panel.Manufacturer}");
+        Console.WriteLine($"The best tariff is {best.Value.tariff.Name}");
+
+        OutputEconomics(best.Value.economics, numYears);
+
+    }
+    private static void OutputEconomics(Economics economics, int numYears)
     {
         if (economics.BreakEvenDate.HasValue && economics.TimeToBreakEven.HasValue)
         {

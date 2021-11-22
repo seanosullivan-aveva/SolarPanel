@@ -4,7 +4,6 @@ using SolarPanel.Types;
 
 namespace SolarPanel.Application
 {
-
     /// <summary>
     /// Provides calculation capabilities for computing solar panel profits
     /// </summary>
@@ -19,7 +18,7 @@ namespace SolarPanel.Application
         /// <param name="installer">The installer to use</param>
         /// <param name="numberOfYears">The number of years to compute the economics over</param>
         /// <returns>The economics</returns>
-        public static SolarPanelEconomics Compute(House house, Panel panel, Tariff tariff, Installer installer, int numberOfYears)
+        public static Economics Compute(House house, Panel panel, Tariff tariff, Installer installer, int numberOfYears)
         {
             // Compute the number of panels that can be fitted to the house
             int numberOfPanels = HouseUtilities.MaxNumberOfPanels(house, panel);
@@ -96,7 +95,7 @@ namespace SolarPanel.Application
 
             float totalProfitOverTimePeriod = totalMoneyGenerated - totalCost;
 
-            return new SolarPanelEconomics(installationCost,
+            return new Economics(installationCost,
                                          panelPurchaseCost,
                                          numberOfPanels,
                                          totalCost,
@@ -113,7 +112,7 @@ namespace SolarPanel.Application
         /// <param name="house">The house</param>
         /// <param name="panel">The panel type to be fitted to the house</param>
         /// <returns>The best installer</returns>
-        public static Installer? FindBestInstaller(House house, Panel panel)
+        public static Installer? FindCheapestInstaller(House house, Panel panel)
         {
             int numberOfPanels = HouseUtilities.MaxNumberOfPanels(house, panel);
 
@@ -135,9 +134,9 @@ namespace SolarPanel.Application
             return bestInstaller;
         }
 
-        public static (Tariff tariff, SolarPanelEconomics economics)? FindBestTariff(House house, Panel panel, Installer installer, int numYears)
+        public static (Tariff tariff, Economics economics)? FindBestTariff(House house, Panel panel, Installer installer, int numYears)
         {
-            SolarPanelEconomics? bestResult = null;
+            Economics? bestResult = null;
             Tariff? bestTariff = null;
 
             foreach (var tariff in TariffProvider.Instance.Tariffs)
@@ -174,6 +173,56 @@ namespace SolarPanel.Application
             }
 
             return (bestTariff, bestResult);
+        }
+
+        public static (Installer installer, Panel panel, Tariff tariff, Economics economics)? FindBestCombination(House house, int numYears)
+        {
+            Economics? bestResult = null;
+            Tariff? bestTariff = null;
+            Installer? bestInstaller = null;
+            Panel? bestPanel = null;
+
+            foreach (var panel in PanelProvider.Instance.SolarPanels)
+            {
+                // Find the best installer for this house and panel combination
+                var installer = FindCheapestInstaller(house, panel);
+
+                if (installer == null)
+                {
+                    continue;
+                }
+
+                // Now find the best tariff for this house and panel combination
+                var tariff = FindBestTariff(house, panel, installer, numYears);
+
+                if (tariff == null)
+                {
+                    continue;
+                }
+
+                // Compare this with the best we've found so far
+                if (bestResult == null)
+                {
+                    bestResult = tariff.Value.economics;
+                    bestTariff = tariff.Value.tariff;
+                    bestInstaller = installer;
+                    bestPanel = panel;
+                }
+                else if (tariff.Value.economics.TotalProfit > bestResult.TotalProfit)
+                {
+                    bestResult = tariff.Value.economics;
+                    bestTariff = tariff.Value.tariff;
+                    bestInstaller = installer;
+                    bestPanel = panel;
+                }
+            }
+
+            if (bestResult == null || bestTariff == null || bestInstaller == null || bestPanel == null)
+            {
+                return null;
+            }
+
+            return (bestInstaller, bestPanel, bestTariff, bestResult);
         }
     }
 }

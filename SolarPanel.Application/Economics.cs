@@ -1,8 +1,8 @@
 ﻿namespace SolarPanel.Application
 {
-    public class SolarPanelEconomics
+    public class Economics
     {
-        public SolarPanelEconomics(
+        public Economics(
             float installationCost,
             float panelCost,
             float panelCount,

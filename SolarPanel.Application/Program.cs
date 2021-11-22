@@ -3,4 +3,5 @@ Console.WriteLine("Starting run");
 
 // Implementation.ReadData();
 //Implementation.KnownHouseAndPanel();
-Implementation.FindMeBestTariff();
+//Implementation.FindMeBestTariff();
+Implementation.FindMeBestCombinationOfPanelAndTariff();
