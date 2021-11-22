@@ -38,6 +38,7 @@ public class Implementation
             return;
         }
 
+ 
         var economics = CalculationEngine.FindBestTariff(house, panel, installer, numYears);
 
         if(economics == null)
@@ -46,6 +47,7 @@ public class Implementation
             return;
         }
         Console.WriteLine("========================================================================");
+        Console.WriteLine($"The best installer is {installer.Id}");
         Console.WriteLine($"The best tariff is {economics.Value.tariff.Name}");
 
         OutputEconomics(economics.Value.economics, numYears);
