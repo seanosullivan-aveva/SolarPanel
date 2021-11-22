@@ -55,7 +55,7 @@ public class Implementation
 
     public static void FindMeBestCombinationOfPanelAndTariff()
     {
-        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Shotwick Solar Park");
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
         int numYears = 25;
 
         var best = CalculationEngine.FindBestCombination(house, numYears);
@@ -74,6 +74,7 @@ public class Implementation
         OutputEconomics(best.Value.economics, numYears);
 
     }
+
     private static void OutputEconomics(Economics economics, int numYears)
     {
         if (economics.BreakEvenDate.HasValue && economics.TimeToBreakEven.HasValue)

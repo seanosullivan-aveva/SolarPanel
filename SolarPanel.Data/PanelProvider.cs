@@ -21,7 +21,6 @@ public class PanelProvider
     {
         var dataFileLocation = AppDomain.CurrentDomain.BaseDirectory + "Panels.json";
 
-        Console.WriteLine($"Loading data file from {dataFileLocation}");
         var dataFile = File.ReadAllText(dataFileLocation);
 
         var data = JsonConvert.DeserializeObject<List<Panel>>(dataFile);

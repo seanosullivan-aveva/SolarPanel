@@ -21,7 +21,6 @@ public class TariffProvider
     {
         var dataFileLocation = AppDomain.CurrentDomain.BaseDirectory + "Tariffs.json";
 
-        Console.WriteLine($"Loading data file from {dataFileLocation}");
         var dataFile = File.ReadAllText(dataFileLocation);
 
         var data = JsonConvert.DeserializeObject<List<Tariff>>(dataFile);

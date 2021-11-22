@@ -7,11 +7,11 @@
   {
     "Id": "Solar Energy Solutions Norfolk",
     "CallOutCost": 6000,
-    "CostPerPanel": 0
+    "CostPerPanel": 25
   },
   {
     "Id": "Cambridge Solar",
     "CallOutCost": 2000,
-    "CostPerPanel": 45
+    "CostPerPanel": 65
   }
 ]

@@ -20,7 +20,6 @@ namespace SolarPanel.Data
         {
             var dataFileLocation = AppDomain.CurrentDomain.BaseDirectory + "Installers.json";
 
-            Console.WriteLine($"Loading data file from {dataFileLocation}");
             var dataFile = File.ReadAllText(dataFileLocation);
 
             var data = JsonConvert.DeserializeObject<List<Installer>>(dataFile);
