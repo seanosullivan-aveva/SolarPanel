@@ -12,7 +12,6 @@ public class Panel
         float efficiency,
         float weight,
         float cost,
-        float installationCost,
         string url)
     {
         Manufacturer = manufacturer;
@@ -22,7 +21,6 @@ public class Panel
         Efficiency = efficiency;
         Weight = weight;
         Cost = cost;
-        InstallationCost = installationCost;
         Url = url;
     }
 
@@ -60,11 +58,6 @@ public class Panel
     /// The purchase cost of the panel (£)
     /// </summary>
     public float Cost { get; }
-
-    /// <summary>
-    /// The const of installation of the panel (£)
-    /// </summary>
-    public float InstallationCost { get; }
 
     /// <summary>
     /// The URL of the product details
