@@ -36,6 +36,8 @@ public class Implementation
         DateTime now = DateTime.Now;
 
         float totalMoneyGenerated = 0f;
+        float totalMoneySavedOnBills = 0f;
+        float totalMoneyMadeInProfit = 0f;
 
         int numberOfYears = 25;
 
@@ -81,8 +83,10 @@ public class Implementation
 
             // Increment the total money for today
             totalMoneyGenerated += dailySavingOnElectricityBillPounds + dailyProfit;
+            totalMoneySavedOnBills += dailySavingOnElectricityBillPounds;
+            totalMoneyMadeInProfit += dailyProfit;
 
-            if(brokeEven == false && totalMoneyGenerated > totalCost)
+            if (brokeEven == false && totalMoneyGenerated > totalCost)
             {
                 // We've broken even!
                 brokeEven = true;
@@ -94,11 +98,33 @@ public class Implementation
 
         if(totalProfitOverTimePeriod >= 0f)
         {
-            Console.WriteLine($"Good - Over {numberOfYears} years the system will generate {totalProfitOverTimePeriod} pounds profit");
+            Console.WriteLine($"Good - Over {numberOfYears} years the system will generate £{totalProfitOverTimePeriod} profit");
         }
         else
         {
-            Console.WriteLine($"Bad - Over {numberOfYears} years the system will generate {-totalProfitOverTimePeriod} pounds loss");
+            Console.WriteLine($"Bad - Over {numberOfYears} years the system will generate £{-totalProfitOverTimePeriod} loss");
+        }
+
+        Console.WriteLine($"Solar Panel Cost: £{panelPurchaseCost}");
+        Console.WriteLine($"Installation Cost: £{installationCost}");
+        Console.WriteLine($"Total Initial Outlay: £{totalCost}");
+
+        if (totalMoneySavedOnBills > 0)
+        {
+            Console.WriteLine($"Over {numberOfYears} years the system will save £{totalMoneySavedOnBills} on electricity bills");
+        }
+        else
+        {
+            Console.WriteLine($"Over {numberOfYears} years the system won't generate enough electricity to sell");
+        }
+
+        if (totalMoneyMadeInProfit > 0)
+        {
+            Console.WriteLine($"Over {numberOfYears} years the system will generate £{totalMoneyMadeInProfit} from selling electricity");
+        }
+        else
+        {
+            Console.WriteLine($"Over {numberOfYears} years the system won't generate enough electricity to sell");
         }
     }
 }
