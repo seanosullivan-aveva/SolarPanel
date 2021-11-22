@@ -41,4 +41,27 @@ public class DateProvider
             current += increment;
         }
     }
+
+    /// <summary>
+    /// Computes the timespan for the specified number of months
+    /// </summary>
+    /// <param name="when">When to start the time from</param>
+    /// <param name="months">The number of months</param>
+    /// <returns>The timespan for that number of months</returns>
+    public TimeSpan ComputeMonths(DateTime when, int months)
+    {
+        return when.AddMonths(months) - when;    
+    }
+
+    /// <summary>
+    /// Computes the timespan for the specified number of years
+    /// </summary>
+    /// <param name="when">When to start the time from</param>
+    /// <param name="years">The number of years</param>
+    /// <returns>The timespan for that number of years</returns>
+
+    public TimeSpan ComputeYears(DateTime when, int years)
+    {
+        return when.AddYears(years) - when;    
+    }
 }
