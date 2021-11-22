@@ -18,7 +18,6 @@ public static class TestUtilities
             0.0f,
             0.0f,
             0.0f,
-            0.0f,
             string.Empty);
     }
 

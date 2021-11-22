@@ -11,12 +11,13 @@ public class Implementation
         }
     }
 
-    public static void SingleHouseAndPanel()
+    public static void KnownHouseAndPanel()
     {
         var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
         var panel = PanelProvider.Instance.SolarPanels.First(o => o.Model == "PowerXT® Pure Black™400W");
         var tariff = TariffProvider.Instance.Tariffs.First(o => o.Name == "Test");
-        
+        var installer = InstallerProvider.Instance.Installers.First();
+
         // Compute the number of panels that can be fitted to the house
         int numberOfPanels = HouseUtilities.MaxNumberOfPanels(house, panel);
 
@@ -25,7 +26,8 @@ public class Implementation
         // Compute the purchase price of the panels
         float panelPurchaseCost = numberOfPanels * panel.Cost;
         // Compute the installation cost of the panels
-        float installationCost = numberOfPanels * panel.InstallationCost;
+        float installationCost = installer.CallOutCost + (numberOfPanels * installer.CostPerPanel);
+
         // Compute the total cost of installation and purchase
         float totalCost = panelPurchaseCost + installationCost;
 

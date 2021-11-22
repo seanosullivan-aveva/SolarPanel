@@ -2,4 +2,4 @@
 Console.WriteLine("Starting run");
 
 // Implementation.ReadData();
-Implementation.SingleHouseAndPanel();
+Implementation.KnownHouseAndPanel();
