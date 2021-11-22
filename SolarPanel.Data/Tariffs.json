@@ -1,18 +1,66 @@
 [
-    {
-        "Name" : "Test",
-        "Price" : 4.5,    
-        "Expiry" : "2025-04-21T00:00:00",    
-        "ExpiredPrice" : "2.3",    
-        "MinimumFeedAmount" : null,   
-        "MaximumFeedAmount" : null    
-    },
-    {
-        "Name" : "Test2",
-        "Price" : 4.3,    
-        "Expiry" : "2030-1-1T00:00:00",    
-        "ExpiredPrice" : "2.15",    
-        "MinimumFeedAmount" : null,
-        "MaximumFeedAmount": null    
-    }  
+  {
+    "Name": "PVA - Standard - Ultra Small - Perpetual",
+    "Price": 3.49,
+    "Expiry": "9999-01-01T00:00:00",
+    "ExpiredPrice": 0.0,
+    "MinimumFeedAmount": 0.0,
+    "MaximumFeedAmount": 4.0
+  },
+  {
+    "Name": "PVA - Standard - Small - Perpetual",
+    "Price": 3.53,
+    "Expiry": "9999-01-01T00:00:00",
+    "ExpiredPrice": 0.0,
+    "MinimumFeedAmount": 4.0,
+    "MaximumFeedAmount": 10.0
+  },
+  {
+    "Name": "PVA - Standard - Medium - Perpetual",
+    "Price": 3.75,
+    "Expiry": "9999-01-01T00:00:00",
+    "ExpiredPrice": 0.0,
+    "MinimumFeedAmount": 10.0,
+    "MaximumFeedAmount": 50.0
+  },
+  {
+    "Name": "PVA - Standard - Large - Perpetual",
+    "Price": 1.57,
+    "Expiry": "9999-01-01T00:00:00",
+    "ExpiredPrice": 0.0,
+    "MinimumFeedAmount": 50.0,
+    "MaximumFeedAmount": 250.0
+  },
+  {
+    "Name": "PVA - Standard - Ultra low - Tapered",
+    "Price": 4.69,
+    "Expiry": "2031-01-01T00:00:00",
+    "ExpiredPrice": 1.57,
+    "MinimumFeedAmount": 0.0,
+    "MaximumFeedAmount": 4.0
+  },
+  {
+    "Name": "PVA - Standard - Low - Tapered",
+    "Price": 4.73,
+    "Expiry": "2031-01-01T00:00:00",
+    "ExpiredPrice": 1.57,
+    "MinimumFeedAmount": 4.0,
+    "MaximumFeedAmount": 10.0
+  },
+  {
+    "Name": "PVA - Standard - Medium - Tapered",
+    "Price": 4.95,
+    "Expiry": "2031-01-01T00:00:00",
+    "ExpiredPrice": 1.57,
+    "MinimumFeedAmount": 10.0,
+    "MaximumFeedAmount": 50.0
+  },
+  {
+    "Name": "PVA - Standard - Large - Tapered",
+    "Price": 2.77,
+    "Expiry": "2031-01-01T00:00:00",
+    "ExpiredPrice": 1.57,
+    "MinimumFeedAmount": 50.0,
+    "MaximumFeedAmount": 250.0
+  }
 ]

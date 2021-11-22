@@ -86,7 +86,7 @@ public class Implementation
         else
         {
             Console.WriteLine("Failure");
-            Console.WriteLine($"After {numYears} we failed to cover the costs of the solar power system");
+            Console.WriteLine($"After {numYears} years we failed to cover the costs of the solar power system");
         }
 
         Console.WriteLine("========================================================================");

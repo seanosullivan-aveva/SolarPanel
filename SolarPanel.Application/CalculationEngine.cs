@@ -143,8 +143,8 @@ namespace SolarPanel.Application
             {
                 var result = Compute(house, panel, tariff, installer, numYears);
 
-                // Check that the tariff is compatible with the house                
-                var housePower = result.PanelCount * panel.Power;
+                // Check that the tariff is compatible with the house (in kilowatts)               
+                var housePower = (result.PanelCount * panel.Power) / 1000f;
 
                 // REFACTOR: Potential performance improvement compute this 
                 // before computing the entire economics
