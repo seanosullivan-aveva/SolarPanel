@@ -19,14 +19,46 @@ public class Implementation
         var installer = InstallerProvider.Instance.Installers.First();
 
         int numYears = 25;
-        var result = CalculationEngine.Compute(house, panel, tariff, installer, numYears);
+        var economics = CalculationEngine.Compute(house, panel, tariff, installer, numYears);
 
-        if (result.BreakEvenDate.HasValue && result.TimeToBreakEven.HasValue)
+        OutputEconomics(economics, numYears);
+    }
+
+    public static void FindMeBestTariff()
+    {
+        int numYears = 25;
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
+        var panel = PanelProvider.Instance.SolarPanels.First(o => o.Model == "PowerXT® Pure Black™400W");
+        var tariff = TariffProvider.Instance.Tariffs.First(o => o.Name == "Test");
+        var installer = CalculationEngine.FindBestInstaller(house, panel);
+
+        if(installer == null)
+        {
+            Console.WriteLine("Failed to find an installer");
+            return;
+        }
+
+        var economics = CalculationEngine.FindBestTariff(house, panel, installer, numYears);
+
+        if(economics == null)
+        {
+            Console.WriteLine("Failed to compute a suitable tariff");
+            return;
+        }
+        Console.WriteLine("========================================================================");
+        Console.WriteLine($"The best tariff is {economics.Value.tariff.Name}");
+
+        OutputEconomics(economics.Value.economics, numYears);
+    }
+
+    private static void OutputEconomics(SolarPanelEconomics economics, int numYears)
+    {
+        if (economics.BreakEvenDate.HasValue && economics.TimeToBreakEven.HasValue)
         {
             Console.WriteLine("========================================================================");
             Console.WriteLine("Success");
-            Console.WriteLine($"Break even date: {result.BreakEvenDate.Value.ToShortDateString()}");
-            Console.WriteLine($"Time To Break Even: {result.TimeToBreakEven.Value.TotalDays:f0} days");
+            Console.WriteLine($"Break even date: {economics.BreakEvenDate.Value.ToShortDateString()}");
+            Console.WriteLine($"Time To Break Even: {economics.TimeToBreakEven.Value.TotalDays:f0} days");
         }
         else
         {
@@ -36,32 +68,32 @@ public class Implementation
 
         Console.WriteLine("========================================================================");
 
-        if (result.TotalProfit >= 0f)
+        if (economics.TotalProfit >= 0f)
         {
-            Console.WriteLine($"Over {numYears} years the system will generate £{result.TotalProfit:f0} profit");
+            Console.WriteLine($"Over {numYears} years the system will generate £{economics.TotalProfit:f0} profit");
         }
         else
         {
-            Console.WriteLine($"Over {numYears} years the system will generate £{-result.TotalProfit:f0} loss");
+            Console.WriteLine($"Over {numYears} years the system will generate £{-economics.TotalProfit:f0} loss");
         }
 
-        Console.WriteLine($"Solar Panel Cost: £{result.PanelCost:f0}");
-        Console.WriteLine($"Number of panels installed: {result.PanelCount}");
-        Console.WriteLine($"Installation Cost: £{result.InstallationCost:f0}");
-        Console.WriteLine($"Total Initial Outlay: £{result.TotalInitialOutlay:f0}");
+        Console.WriteLine($"Solar Panel Cost: £{economics.PanelCost:f0}");
+        Console.WriteLine($"Number of panels installed: {economics.PanelCount}");
+        Console.WriteLine($"Installation Cost: £{economics.InstallationCost:f0}");
+        Console.WriteLine($"Total Initial Outlay: £{economics.TotalInitialOutlay:f0}");
 
-        if (result.SavedOnBills > 0)
+        if (economics.SavedOnBills > 0)
         {
-            Console.WriteLine($"Over {numYears} years the system will save £{result.SavedOnBills:f0} on electricity bills");
+            Console.WriteLine($"Over {numYears} years the system will save £{economics.SavedOnBills:f0} on electricity bills");
         }
         else
         {
             Console.WriteLine($"Over {numYears} years the system won't generate enough electricity to sell");
         }
 
-        if (result.GenerationProfit > 0)
+        if (economics.GenerationProfit > 0)
         {
-            Console.WriteLine($"Over {numYears} years the system will generate £{result.GenerationProfit:f0} from selling electricity");
+            Console.WriteLine($"Over {numYears} years the system will generate £{economics.GenerationProfit:f0} from selling electricity");
         }
         else
         {
@@ -69,4 +101,5 @@ public class Implementation
         }
         Console.WriteLine("========================================================================");
     }
+
 }

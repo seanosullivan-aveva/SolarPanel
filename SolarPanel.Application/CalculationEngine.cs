@@ -106,5 +106,74 @@ namespace SolarPanel.Application
                                          totalMoneySavedOnBills,
                                          totalMoneyMadeInProfit);
         }
+
+        /// <summary>
+        /// Works out who is the cheapest installer
+        /// </summary>
+        /// <param name="house">The house</param>
+        /// <param name="panel">The panel type to be fitted to the house</param>
+        /// <returns>The best installer</returns>
+        public static Installer? FindBestInstaller(House house, Panel panel)
+        {
+            int numberOfPanels = HouseUtilities.MaxNumberOfPanels(house, panel);
+
+            float bestInstallationCost = float.MaxValue;
+            Installer? bestInstaller = null;
+
+            foreach (var installer in InstallerProvider.Instance.Installers)
+            {
+                // Compute the installation cost of the panels
+                float installationCost = installer.CallOutCost + (numberOfPanels * installer.CostPerPanel);
+
+                if(installationCost < bestInstallationCost)
+                {
+                    bestInstallationCost = installationCost;
+                    bestInstaller = installer;
+                }
+            }
+
+            return bestInstaller;
+        }
+
+        public static (Tariff tariff, SolarPanelEconomics economics)? FindBestTariff(House house, Panel panel, Installer installer, int numYears)
+        {
+            SolarPanelEconomics? bestResult = null;
+            Tariff? bestTariff = null;
+
+            foreach (var tariff in TariffProvider.Instance.Tariffs)
+            {
+                var result = Compute(house, panel, tariff, installer, numYears);
+
+                // Check that the tariff is compatible with the house                
+                var housePower = result.PanelCount * panel.Power;
+
+                // REFACTOR: Potential performance improvement compute this 
+                // before computing the entire economics
+                if ((tariff.MinimumFeedAmount.HasValue && housePower < tariff.MinimumFeedAmount)
+                    || (tariff.MaximumFeedAmount.HasValue && housePower > tariff.MaximumFeedAmount))
+                {
+                    // This tariff is unsuitable for this house and configuration
+                    continue;
+                }
+
+                if(bestResult == null )
+                {
+                    bestResult = result;
+                    bestTariff = tariff;
+                }
+                else if(result.TotalProfit > bestResult.TotalProfit)
+                {
+                    bestResult = result;
+                    bestTariff = tariff;
+                }
+            }
+
+            if(bestTariff == null || bestResult == null)
+            {
+                return null;
+            }
+
+            return (bestTariff, bestResult);
+        }
     }
 }

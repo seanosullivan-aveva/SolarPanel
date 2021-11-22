@@ -9,10 +9,10 @@
     },
     {
         "Name" : "Test2",
-        "Price" : 3.8,    
+        "Price" : 4.3,    
         "Expiry" : "2030-1-1T00:00:00",    
-        "ExpiredPrice" : "2.35",    
-        "MinimumFeedAmount" : null,   
-        "MaximumFeedAmount" : null    
+        "ExpiredPrice" : "2.15",    
+        "MinimumFeedAmount" : null,
+        "MaximumFeedAmount": null    
     }  
 ]
