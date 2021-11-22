@@ -16,9 +16,9 @@ namespace SolarPanel.Data
 
         public static DaylightProvider Instance { get { return lazy.Value; } }
 
-        private Dictionary<int, float> m_setMonthToUsableDaylightHours;
-
         #endregion
+
+        private Dictionary<int, float> m_setMonthToUsableDaylightHours;
 
         #region Constructors
 

@@ -25,11 +25,13 @@
         {            
             "label": "Build All",
             "group": "build",
+            "dependsOrder": "sequence",
             "dependsOn":["build-exe", "build-application-tests", "build-logic-tests"]
         }, 
         {            
             "label": "Build Tests",
-            "group": "build",
+            "group": "build",  
+            "dependsOrder": "sequence",          
             "dependsOn":["build-application-tests", "build-logic-tests"]
         }, 
         {            
