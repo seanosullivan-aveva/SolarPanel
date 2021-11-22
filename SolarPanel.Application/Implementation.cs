@@ -47,6 +47,7 @@ public class Implementation
         }
 
         Console.WriteLine($"Solar Panel Cost: £{result.PanelCost:f0}");
+        Console.WriteLine($"Number of panels installed: {result.PanelCount}");
         Console.WriteLine($"Installation Cost: £{result.InstallationCost:f0}");
         Console.WriteLine($"Total Initial Outlay: £{result.TotalInitialOutlay:f0}");
 

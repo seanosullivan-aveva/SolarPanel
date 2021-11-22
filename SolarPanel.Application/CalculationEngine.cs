@@ -9,6 +9,7 @@ namespace SolarPanel.Application
         public CalculationResult(
             float installationCost,
             float panelCost,
+            float panelCount,
             float totalInitialOutlay,
             DateTime? breakEvenDate,
             TimeSpan? timeToBreakEven,
@@ -18,6 +19,7 @@ namespace SolarPanel.Application
         {
             InstallationCost = installationCost;
             PanelCost = panelCost;
+            PanelCount = panelCount;
             TotalInitialOutlay = totalInitialOutlay;
             BreakEvenDate = breakEvenDate;
             TimeToBreakEven = timeToBreakEven;
@@ -34,6 +36,10 @@ namespace SolarPanel.Application
         /// The purchase cost of the panels (£)
         /// </summary>
         public float PanelCost { get; }
+        /// <summary>
+        /// The number of panels installed
+        /// </summary>
+        public float PanelCount { get; }
         /// <summary>
         /// The total initial outlay (£)
         /// </summary>
@@ -144,6 +150,7 @@ namespace SolarPanel.Application
 
             return new CalculationResult(installationCost,
                                          panelPurchaseCost,
+                                         numberOfPanels,
                                          totalCost,
                                          breakEvenDate,
                                          breakEvenDate - now,
