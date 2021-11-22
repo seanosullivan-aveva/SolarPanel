@@ -1,0 +1,17 @@
+[
+  {
+    "Id": "JNS Solar",
+    "CallOutCost": 1500,
+    "CostPerPanel": 100
+  },
+  {
+    "Id": "Solar Energy Solutions Norfolk",
+    "CallOutCost": 6000,
+    "CostPerPanel": 0
+  },
+  {
+    "Id": "Cambridge Solar",
+    "CallOutCost": 2000,
+    "CostPerPanel": 45
+  }
+]
