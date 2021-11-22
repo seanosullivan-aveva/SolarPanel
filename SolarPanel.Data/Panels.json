@@ -1,22 +1,62 @@
 [
-    {
-        "Manufacturer": "Solaria",
-        "Model": "PowerXT® Pure Black™400W",
-        "Size": "1.204, 1.644",
-        "Power": "400.0",
-        "Efficiency": "20.20",
-        "Weight" : "4.3",
-        "Cost" : "334.03",
-        "Url" : "https://www.solaria.com/powerxt-400-solar-panels"
-    },
-    {
-        "Manufacturer": "Solar Power Supply",
-        "Model": "120W SHINGLE",
-        "Size": "1.17, 0.505",
-        "Power": "118.0",
-        "Efficiency": "21.8",
-        "Weight" : "7.0",
-        "Cost" : "129.95",
-        "Url" : "https://www.solarpowersupply.co.uk/solar-power-supply-120w-shingle-solar-panel"
-    }
+  {
+    "Manufacturer": "Solaria",
+    "Model": "PowerXT® Pure Black™400W",
+    "Size": "1.204, 1.644",
+    "Power": "400.0",
+    "Efficiency": "20.20",
+    "Weight": "4.3",
+    "Cost": "334.03",
+    "Url": "https://www.solaria.com/powerxt-400-solar-panels"
+  },
+  {
+    "Manufacturer": "Solar Power Supply",
+    "Model": "120W SHINGLE",
+    "Size": "1.17, 0.505",
+    "Power": "118.0",
+    "Efficiency": "21.8",
+    "Weight": "7.0",
+    "Cost": "129.95",
+    "Url": "https://www.solarpowersupply.co.uk/solar-power-supply-120w-shingle-solar-panel"
+  },
+  {
+    "Manufacturer": "Trina",
+    "Model": "325W Trina Honey Mono All Black",
+    "Size": "1.69, 1.12",
+    "Power": "325.0",
+    "Efficiency": "18.7",
+    "Weight": "18.0",
+    "Cost": "131.95",
+    "Url": "https://www.itstechnologies.shop/products/325w-trina-honey-mono-all-black-solar-panel"
+  },
+  {
+    "Manufacturer": "Viridian",
+    "Model": "Viridian Clearline 280W Poly Black",
+    "Size": "1.64, 0.992",
+    "Power": "280.0",
+    "Efficiency": "17.9",
+    "Weight": "21.0",
+    "Cost": "163.95",
+    "Url": "https://www.itstechnologies.shop/products/viridian-clearline-270w-poly-black-backsheet-bipv-roof-integrated-solar-panel"
+  },
+  {
+    "Manufacturer": "Q Cells",
+    "Model": "385W Q Cells ML Mono Q Peak Duo G9+",
+    "Size": "1.84, 1.03",
+    "Power": "385.0",
+    "Efficiency": "20.3",
+    "Weight": "19.5",
+    "Cost": "169.68",
+    "Url": "https://www.itstechnologies.shop/collections/qcells-solar-panel/products/385w-q-cells-ml-mono-q-peak-duo-g9-black-frame"
+  },
+  {
+    "Manufacturer": "LG",
+    "Model": "375W LG Mono Neon R V5",
+    "Size": "1.7, 1.016",
+    "Power": "375.0",
+    "Efficiency": "21.1",
+    "Weight": "17.5",
+    "Cost": "307.92",
+    "Url": "https://www.itstechnologies.shop/collections/lg-solar/products/375w-lg-mono-neon-r-v5-solar-panel"
+  }
 ]

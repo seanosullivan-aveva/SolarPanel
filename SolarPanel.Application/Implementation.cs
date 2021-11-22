@@ -55,7 +55,7 @@ public class Implementation
 
     public static void FindMeBestCombinationOfPanelAndTariff()
     {
-        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Shotwick Solar Park");
         int numYears = 25;
 
         var best = CalculationEngine.FindBestCombination(house, numYears);
@@ -105,7 +105,7 @@ public class Implementation
         Console.WriteLine($"Installation Cost: £{economics.InstallationCost:f0}");
         Console.WriteLine($"Total Initial Outlay: £{economics.TotalInitialOutlay:f0}");
 
-        if (economics.SavedOnBills > 0)
+        if (economics.SavedOnBills >= 0)
         {
             Console.WriteLine($"Over {numYears} years the system will save £{economics.SavedOnBills:f0} on electricity bills");
         }

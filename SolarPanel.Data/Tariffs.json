@@ -62,5 +62,13 @@
     "ExpiredPrice": 1.57,
     "MinimumFeedAmount": 50.0,
     "MaximumFeedAmount": 250.0
+  },
+  {
+    "Name": "PVA - Commerical - Large",
+    "Price": 1.57,
+    "Expiry": "2031-01-01T00:00:00",
+    "ExpiredPrice": 1.57,
+    "MinimumFeedAmount": 250.0,
+    "MaximumFeedAmount": null
   }
 ]

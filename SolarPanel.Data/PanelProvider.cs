@@ -35,7 +35,7 @@ public class PanelProvider
     {
         var file = JsonConvert.SerializeObject(SolarPanels);
     }
-
+    
     /// <summary>
     /// All the solar panels available
     /// </summary>

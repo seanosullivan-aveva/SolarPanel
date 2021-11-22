@@ -35,7 +35,7 @@ public class TariffProvider
     {
         var file = JsonConvert.SerializeObject(Tariffs);
     }
-
+    
     /// <summary>
     /// All the solar Tariffs available
     /// </summary>

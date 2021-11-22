@@ -1,20 +1,32 @@
 [
-    {
-        "Id": "Seans House",
-        "RoofSize": "8, 3",
-        "DaylightElectricityConsumption" : 18000,
-        "ElectricityCost" : 0.073
-    },
-    {
-        "Id": "James House",
-        "RoofSize": "4, 4",
-        "DaylightElectricityConsumption" : 11000,
-        "ElectricityCost" : 0.078
-    },
-    {
-        "Id": "Richards Mansion",
-        "RoofSize": "22, 4",
-        "DaylightElectricityConsumption" : 40000,
-        "ElectricityCost" : 0.069
-    }
+  {
+    "Id": "Seans House",
+    "RoofSize": "8, 3",
+    "DaylightElectricityConsumption": 18000,
+    "ElectricityCost": 0.073
+  },
+  {
+    "Id": "James House",
+    "RoofSize": "4, 4",
+    "DaylightElectricityConsumption": 11000,
+    "ElectricityCost": 0.078
+  },
+  {
+    "Id": "Richards Mansion",
+    "RoofSize": "22, 4",
+    "DaylightElectricityConsumption": 40000,
+    "ElectricityCost": 0.069
+  },
+  {
+    "Id": "Ash's Shed",
+    "RoofSize": "1.1, 3.0",
+    "DaylightElectricityConsumption": 2000,
+    "ElectricityCost": 0.073
+  },
+  {
+    "Id": "Shotwick Solar Park",
+    "RoofSize": "1000.0, 400.0",
+    "DaylightElectricityConsumption": 0,
+    "ElectricityCost": 0.073
+  }
 ]

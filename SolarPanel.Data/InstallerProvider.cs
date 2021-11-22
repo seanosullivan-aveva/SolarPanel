@@ -15,7 +15,7 @@ namespace SolarPanel.Data
         #endregion
 
         #region Constructors
-
+        
         private InstallerProvider()
         {
             var dataFileLocation = AppDomain.CurrentDomain.BaseDirectory + "Installers.json";
