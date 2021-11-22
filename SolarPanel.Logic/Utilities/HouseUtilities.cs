@@ -42,8 +42,8 @@ public static class HouseUtilities
     /// <param name="house">The house with solar panels fitted</param>
     /// <param name="hoursOfDaylight">The number of hours of daylight</param>
     /// <returns></returns>
-    public static float PowerGeneratedForHouse(HouseWithPanel house, int hoursOfDaylight)
+    public static float PowerGeneratedForHouse(HouseWithPanel house, float hoursOfDaylight)
     {
-        return house.NumberOfPanels * house.Panel.Power * hoursOfDaylight;
+        return (float)house.NumberOfPanels * house.Panel.Power * hoursOfDaylight;
     }
 }

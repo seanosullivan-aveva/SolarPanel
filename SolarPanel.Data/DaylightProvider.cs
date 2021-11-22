@@ -54,7 +54,7 @@ namespace SolarPanel.Data
         /// <returns>The amount of usable daylight per day for the month specified</returns>
         public float GetUsableDaylight(int month)
         {
-            if(month < 0 || month > m_setMonthToUsableDaylightHours.Count - 1)
+            if(month < 1 || month > m_setMonthToUsableDaylightHours.Count)
             {
                 throw new ArgumentOutOfRangeException($"The month specified is out of range {month}");
             }

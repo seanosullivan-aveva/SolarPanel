@@ -18,7 +18,7 @@ public class TarifUtilities_Tests
     public void Computes_generation_cost_correctly_simple()
     {
         // Arrange
-        Tariff tariff = CreateTariff(1.0, DateTime.MaxValue, 1.0);
+        Tariff tariff = CreateTariff(1.0f, DateTime.MaxValue, 1.0f);
 
         double amountGenerated = 100;
         DateTime when = new DateTime(2021, 11, 19);
@@ -35,7 +35,7 @@ public class TarifUtilities_Tests
     public void Computes_generation_cost_correctly_simple_2()
     {
         // Arrange
-        Tariff tariff = CreateTariff(1.0, DateTime.MaxValue, 1.0);
+        Tariff tariff = CreateTariff(1.0f, DateTime.MaxValue, 1.0f);
 
         double amountGenerated = 320;
         DateTime when = new DateTime(2021, 11, 19);
@@ -52,7 +52,7 @@ public class TarifUtilities_Tests
     public void Computes_generation_cost_correctly_crosses_expiry_date()
     {
         // Arrange
-        Tariff tariff = CreateTariff(1.0, DateTime.Now, 0.5);
+        Tariff tariff = CreateTariff(1.0f, DateTime.Now, 0.5f);
 
         double amountGenerated = 320;
         DateTime when = DateTime.Now + TimeSpan.FromDays(1);
@@ -69,7 +69,7 @@ public class TarifUtilities_Tests
     public void Computes_generation_cost_correctly_complex()
     {
         // Arrange
-        Tariff tariff = CreateTariff(4.42, DateTime.MaxValue, 1.32);
+        Tariff tariff = CreateTariff(4.42f, DateTime.MaxValue, 1.32f);
 
         double amountGenerated = 320;
         DateTime when = DateTime.Now + TimeSpan.FromDays(1);

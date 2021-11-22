@@ -2,7 +2,7 @@
     {
         "Manufacturer": "Solaria",
         "Model": "PowerXT® Pure Black™400W",
-        "PanelSize": "1.204, 1.644",
+        "Size": "1.204, 1.644",
         "Power": "400.0",
         "Efficiency": "20.20",
         "Weight" : "4.3",
@@ -13,7 +13,7 @@
     {
         "Manufacturer": "Solar Power Supply",
         "Model": "120W SHINGLE",
-        "PanelSize": "1.17, 0.505",
+        "Size": "1.17, 0.505",
         "Power": "120.0",
         "Efficiency": "21.8",
         "Weight" : "7.0",

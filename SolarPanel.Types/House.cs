@@ -32,6 +32,6 @@ public class House
     /// </summary>
     public float DaylightElectricityConsumption {get;}
 
-    // The price the house purchases electricity for ($/kWh)
+    // The price the house purchases electricity for (£/kWh)
     public float ElectricityCost { get; }
 }

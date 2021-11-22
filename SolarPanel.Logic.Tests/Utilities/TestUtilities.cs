@@ -3,7 +3,7 @@ using SolarPanel.Types;
 
 public static class TestUtilities
 {
-    public static Tariff CreateTariff(double price, DateTime expiry, double expiredPrice)
+    public static Tariff CreateTariff(float price, DateTime expiry, float expiredPrice)
     {
         return new Tariff("Test", price, expiry, expiredPrice, null, null);
     }
@@ -24,6 +24,6 @@ public static class TestUtilities
 
     public static House CreateTestHouse(SizeF size)
     {
-        return new House("Test", size, 0, 0);
+        return new House("Test", size, 0f, 0f);
     }
 }

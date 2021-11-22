@@ -3,18 +3,18 @@
         "Id": "Seans House",
         "RoofSize": "8, 3",
         "DaylightElectricityConsumption" : 18000,
-        "ElectricityCost" : 0.73
+        "ElectricityCost" : 0.073
     },
     {
         "Id": "James House",
         "RoofSize": "4, 4",
         "DaylightElectricityConsumption" : 11000,
-        "ElectricityCost" : 0.78
+        "ElectricityCost" : 0.078
     },
     {
         "Id": "Richards Mansion",
         "RoofSize": "22, 4",
         "DaylightElectricityConsumption" : 40000,
-        "ElectricityCost" : 0.69
+        "ElectricityCost" : 0.069
     }
 ]

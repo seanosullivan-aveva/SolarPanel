@@ -1,50 +1,50 @@
 [
     {
-        "Month" : 0,
+        "Month" : 1,
         "HoursOfDaylightPerDay" : 8
     },
     {
-        "Month" : 1,
+        "Month" : 2,
         "HoursOfDaylightPerDay" : 9
     },
     {
-        "Month" : 2,
-        "HoursOfDaylightPerDay" : 11
-    },
-    {
         "Month" : 3,
-        "HoursOfDaylightPerDay" : 13
+        "HoursOfDaylightPerDay" : 11
     },
     {
         "Month" : 4,
-        "HoursOfDaylightPerDay" : 15
+        "HoursOfDaylightPerDay" : 13
     },
     {
         "Month" : 5,
-        "HoursOfDaylightPerDay" : 16
+        "HoursOfDaylightPerDay" : 15
     },
     {
         "Month" : 6,
-        "HoursOfDaylightPerDay" : 16.5
-    },
-    {
-        "Month" : 7,
         "HoursOfDaylightPerDay" : 16
     },
     {
+        "Month" : 7,
+        "HoursOfDaylightPerDay" : 16.5
+    },
+    {
         "Month" : 8,
-        "HoursOfDaylightPerDay" : 14
+        "HoursOfDaylightPerDay" : 16
     },
     {
         "Month" : 9,
-        "HoursOfDaylightPerDay" : 11
+        "HoursOfDaylightPerDay" : 14
     },
     {
         "Month" : 10,
-        "HoursOfDaylightPerDay" : 10
+        "HoursOfDaylightPerDay" : 11
     },
     {
         "Month" : 11,
+        "HoursOfDaylightPerDay" : 10
+    },
+    {
+        "Month" : 12,
         "HoursOfDaylightPerDay" : 8
     }
 ]

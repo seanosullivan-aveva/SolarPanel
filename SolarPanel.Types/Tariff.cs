@@ -4,11 +4,11 @@ public class Tariff
 {
     public Tariff(
         string name,
-        double price,
+        float price,
         DateTime expiry,
-        double expiredPrice,
-        double? minimumFeedAmount,
-        double? maximumFeedAmount)
+        float expiredPrice,
+        float? minimumFeedAmount,
+        float? maximumFeedAmount)
     {
         Name = name;
         Price = price;
@@ -18,15 +18,35 @@ public class Tariff
         MaximumFeedAmount = maximumFeedAmount;
     }
 
+    /// <summary>
+    /// The name of the tariff
+    /// </summary>
     public string Name { get; }
 
-    public double Price { get; }
+    /// <summary>
+    /// The feed in price (£/kWh)
+    /// </summary>
+    public float Price { get; }
 
+    /// <summary>
+    /// The expiry date of the tariff
+    /// </summary>
     public DateTime Expiry { get; }
 
-    public double ExpiredPrice { get; }
+    /// <summary>
+    /// The feed in price after the expiry date has expired
+    /// </summary>
+    public float ExpiredPrice { get; }
 
-    public double? MinimumFeedAmount { get; }
+    /// <summary>
+    /// The minimum amount (kWh) that must be supplied to qualify for this tariff
+    /// </summary>
+    /// <value></value>
+    public float? MinimumFeedAmount { get; }
 
-    public double? MaximumFeedAmount { get; }
+    /// <summary>
+    /// The maximum amount (kWh) that must be supplies to qualify for this tariff
+    /// </summary>
+    /// <value></value>
+    public float? MaximumFeedAmount { get; }
 }

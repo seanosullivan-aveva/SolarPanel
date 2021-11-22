@@ -2,7 +2,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using SolarPanel.Types;
 
-namespace SolarPower.Data;
+namespace SolarPanel.Data;
 
 public class TariffProvider
 {
