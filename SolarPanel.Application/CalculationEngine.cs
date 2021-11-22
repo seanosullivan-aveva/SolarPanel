@@ -4,74 +4,22 @@ using SolarPanel.Types;
 
 namespace SolarPanel.Application
 {
-    public class CalculationResult
-    {
-        public CalculationResult(
-            float installationCost,
-            float panelCost,
-            float panelCount,
-            float totalInitialOutlay,
-            DateTime? breakEvenDate,
-            TimeSpan? timeToBreakEven,
-            float totalProfit,
-            float savedOnBills,
-            float generationProfit)
-        {
-            InstallationCost = installationCost;
-            PanelCost = panelCost;
-            PanelCount = panelCount;
-            TotalInitialOutlay = totalInitialOutlay;
-            BreakEvenDate = breakEvenDate;
-            TimeToBreakEven = timeToBreakEven;
-            TotalProfit = totalProfit;
-            SavedOnBills = savedOnBills;
-            GenerationProfit = generationProfit;
-        }
-
-        /// <summary>
-        /// The installation costs (£)
-        /// </summary>
-        public float InstallationCost { get; }
-        /// <summary>
-        /// The purchase cost of the panels (£)
-        /// </summary>
-        public float PanelCost { get; }
-        /// <summary>
-        /// The number of panels installed
-        /// </summary>
-        public float PanelCount { get; }
-        /// <summary>
-        /// The total initial outlay (£)
-        /// </summary>
-        public float TotalInitialOutlay { get; }
-        /// <summary>
-        /// The break even date
-        /// </summary>
-        public DateTime? BreakEvenDate { get; }
-        /// <summary>
-        /// The time it takes to break even
-        /// </summary>
-        public TimeSpan? TimeToBreakEven { get; }
-        /// <summary>
-        /// The total profit from installing the panels (£)
-        /// </summary>
-        public float TotalProfit { get; }
-        /// <summary>
-        /// The amount saved on bills (£)
-        /// </summary>
-        public float SavedOnBills { get; }
-        /// <summary>
-        /// The amount made from selling electricity back to the grid (£)
-        /// </summary>
-        public float GenerationProfit { get; }
-    }
 
     /// <summary>
     /// Provides calculation capabilities for computing solar panel profits
     /// </summary>
     internal class CalculationEngine
     {
-        public static CalculationResult Compute(House house, Panel panel, Tariff tariff, Installer installer, int numberOfYears)
+        /// <summary>
+        /// Computes the metrics for the specified configuration
+        /// </summary>
+        /// <param name="house">The house</param>
+        /// <param name="panel">The type of panel fitted</param>
+        /// <param name="tariff">The tariff to use</param>
+        /// <param name="installer">The installer to use</param>
+        /// <param name="numberOfYears">The number of years to compute the economics over</param>
+        /// <returns>The economics</returns>
+        public static SolarPanelEconomics Compute(House house, Panel panel, Tariff tariff, Installer installer, int numberOfYears)
         {
             // Compute the number of panels that can be fitted to the house
             int numberOfPanels = HouseUtilities.MaxNumberOfPanels(house, panel);
@@ -148,7 +96,7 @@ namespace SolarPanel.Application
 
             float totalProfitOverTimePeriod = totalMoneyGenerated - totalCost;
 
-            return new CalculationResult(installationCost,
+            return new SolarPanelEconomics(installationCost,
                                          panelPurchaseCost,
                                          numberOfPanels,
                                          totalCost,

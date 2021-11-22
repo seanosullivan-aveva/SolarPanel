@@ -1,6 +1,5 @@
 using SolarPanel.Application;
 using SolarPanel.Data;
-using SolarPanel.Logic.Utilities;
 
 public class Implementation
 {
