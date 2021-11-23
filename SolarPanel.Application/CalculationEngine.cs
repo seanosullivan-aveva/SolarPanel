@@ -75,12 +75,10 @@ namespace SolarPanel.Application
 
                 // Use the house energy tariff to compute how much was saved from the electricity bill
                 float dailySavingOnElectricityBillPounds = house.ElectricityCost * kiloWattHoursConsumedByHouse;
-
                 // Compute the tariff cost
                 float dayTariffPencePerKilowattHour = (day <= tariff.Expiry) ? tariff.Price : tariff.ExpiredPrice;
                 // Convert the tariff into pounds per kilowatt hour
                 float dayTariffPoundPerKilowattHour = dayTariffPencePerKilowattHour / 100f;
-
                 // Use the feed in tariff to compute how much is paid by the electicity supplies
                 float dailyProfit = kiloWattHoursSentToGrid * dayTariffPoundPerKilowattHour;
 
