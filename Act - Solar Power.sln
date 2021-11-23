@@ -1,27 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Data", "SolarPanel.Data\SolarPanel.Data.csproj", "{3A7C777E-BFB1-43E1-941D-32916F2978D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Data", "SolarPanel.Data\SolarPanel.Data.csproj", "{3A7C777E-BFB1-43E1-941D-32916F2978D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Application", "SolarPanel.Application\SolarPanel.Application.csproj", "{9912CD7F-8BA8-43F4-AE37-B70944953965}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Application", "SolarPanel.Application\SolarPanel.Application.csproj", "{9912CD7F-8BA8-43F4-AE37-B70944953965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Application.Tests", "SolarPanel.Application.Tests\SolarPanel.Application.Tests.csproj", "{DDD74461-B077-4977-AFB8-FD444C2EDC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Application.Tests", "SolarPanel.Application.Tests\SolarPanel.Application.Tests.csproj", "{DDD74461-B077-4977-AFB8-FD444C2EDC85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Logic", "SolarPanel.Logic\SolarPanel.Logic.csproj", "{24DD4CE5-1B84-4155-8319-B0351FCF87E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Logic", "SolarPanel.Logic\SolarPanel.Logic.csproj", "{24DD4CE5-1B84-4155-8319-B0351FCF87E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Logic.Tests", "SolarPanel.Logic.Tests\SolarPanel.Logic.Tests.csproj", "{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Logic.Tests", "SolarPanel.Logic.Tests\SolarPanel.Logic.Tests.csproj", "{B98C7348-4B9A-46AE-A3E0-261D214FBAD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarPanel.Types", "SolarPanel.Types\SolarPanel.Types.csproj", "{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarPanel.Types", "SolarPanel.Types\SolarPanel.Types.csproj", "{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SolarPanel.Application.VB", "SolarPanel.Application.VB\SolarPanel.Application.VB.vbproj", "{AC4E63E9-3C1C-4C4F-86D9-51CDDC85D834}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SolarPanel.Application.VB.Tests", "SolarPanel.Application.VB.Tests\SolarPanel.Application.VB.Tests.vbproj", "{243EBC49-0BA2-419A-B3C4-88901759F222}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3A7C777E-BFB1-43E1-941D-32916F2978D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,5 +49,19 @@ Global
 		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DFE6AD5-CC16-496A-A9DB-DA3602D219E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4E63E9-3C1C-4C4F-86D9-51CDDC85D834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4E63E9-3C1C-4C4F-86D9-51CDDC85D834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4E63E9-3C1C-4C4F-86D9-51CDDC85D834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4E63E9-3C1C-4C4F-86D9-51CDDC85D834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243EBC49-0BA2-419A-B3C4-88901759F222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243EBC49-0BA2-419A-B3C4-88901759F222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243EBC49-0BA2-419A-B3C4-88901759F222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243EBC49-0BA2-419A-B3C4-88901759F222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B32038B9-D6E2-46E3-922D-779BE4EF85B4}
 	EndGlobalSection
 EndGlobal

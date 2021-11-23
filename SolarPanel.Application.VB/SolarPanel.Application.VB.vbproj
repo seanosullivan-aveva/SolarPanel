@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SolarPanel.Application.VB</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SolarPanel.Data\SolarPanel.Data.csproj" />
+    <ProjectReference Include="..\SolarPanel.Logic\SolarPanel.Logic.csproj" />
+    <ProjectReference Include="..\SolarPanel.Types\SolarPanel.Types.csproj" />
+  </ItemGroup>
+
+</Project>
