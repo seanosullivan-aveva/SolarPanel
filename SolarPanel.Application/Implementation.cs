@@ -15,7 +15,7 @@ public class Implementation
     {
         var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
         var panel = PanelProvider.Instance.SolarPanels.First(o => o.Model == "PowerXT® Pure Black™400W");
-        var tariff = TariffProvider.Instance.Tariffs.First(o => o.Name == "Test");
+        var tariff = TariffProvider.Instance.Tariffs.First(o => o.Name == "PVA - Standard - Ultra Small - Perpetual");
         var installer = InstallerProvider.Instance.Installers.First();
 
         int numYears = 25;
@@ -55,7 +55,7 @@ public class Implementation
 
     public static void FindMeBestCombinationOfPanelAndTariff()
     {
-        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Seans House");
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Richards Mansion");
         int numYears = 25;
 
         var best = CalculationEngine.FindBestCombination(house, numYears);
