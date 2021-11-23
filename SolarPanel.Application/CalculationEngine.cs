@@ -7,7 +7,7 @@ namespace SolarPanel.Application
     /// <summary>
     /// Provides calculation capabilities for computing solar panel profits
     /// </summary>
-    internal class CalculationEngine
+    public class CalculationEngine
     {
         /// <summary>
         /// Computes the economics for the specified configuration

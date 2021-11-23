@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SolarPanel.Application\SolarPanel.Application.csproj" />
     <ProjectReference Include="..\SolarPanel.Data\SolarPanel.Data.csproj" />
   </ItemGroup>
 
