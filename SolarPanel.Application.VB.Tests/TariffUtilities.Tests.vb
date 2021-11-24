@@ -1,7 +1,4 @@
-Imports System
-Imports System.Drawing
 Imports NUnit.Framework
-Imports SolarPanel.Logic.Utilities
 Imports SolarPanel.Types
 
 <TestFixture>

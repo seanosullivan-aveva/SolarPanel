@@ -1,4 +1,3 @@
-Imports System
 Imports SolarPanel.Data
 
 Module Program
