@@ -3,6 +3,7 @@ using NUnit.Framework;
 using SolarPanel.Types;
 using SolarPanel.Logic.Utilities;
 using static TestUtilities;
+using System;
 
 namespace SolarPanel.Logic.Tests;
 

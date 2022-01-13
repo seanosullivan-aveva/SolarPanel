@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SolarPanel.Application.VB": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Richards Mansion\""
+    }
+  }
+}

@@ -1,5 +1,6 @@
 using SolarPanel.Application;
 using SolarPanel.Data;
+using System;
 
 public class Implementation
 {
@@ -53,9 +54,9 @@ public class Implementation
         OutputEconomics(economics.Value.economics, numYears);
     }
 
-    public static void FindMeBestCombinationOfPanelAndTariff()
+    public static void FindMeBestCombinationOfPanelAndTariff(string houseName)
     {
-        var house = HouseProvider.Instance.Houses.First(o => o.Id == "Richards Mansion");
+        var house = HouseProvider.Instance.Houses.First(o => o.Id == houseName);
         int numYears = 25;
 
         var best = CalculationEngine.FindBestCombination(house, numYears);

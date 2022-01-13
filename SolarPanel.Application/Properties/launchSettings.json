@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SolarPanel.Application": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Seans House\""
+    }
+  }
+}

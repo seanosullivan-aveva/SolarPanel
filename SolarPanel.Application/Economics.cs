@@ -1,4 +1,6 @@
-﻿namespace SolarPanel.Application
+﻿using System;
+
+namespace SolarPanel.Application
 {
     public class Economics
     {

@@ -1,3 +1,4 @@
+using System;
 namespace SolarPanel.Types;
 
 public class Tariff

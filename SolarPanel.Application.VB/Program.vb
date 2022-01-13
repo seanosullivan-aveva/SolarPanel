@@ -2,11 +2,11 @@ Imports SolarPanel.Data
 
 Module Program
     Sub Main(args As String())
-        Dim Houses = HouseProvider.Instance.Houses
-        Dim Tariffs = TariffProvider.Instance.Tariffs
-        Dim Installers = InstallerProvider.Instance.Installers
-        Dim SolarPanels = PanelProvider.Instance.SolarPanels
+        If args.Length = 0 Then
+            Console.WriteLine("Please provide the name of the house")
+            Return
+        End If
 
-        Console.WriteLine("Hello World!")
+        Implementation.FindMeBestCombinationOfPanelAndTariff(args.ElementAt(0))
     End Sub
 End Module
